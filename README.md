@@ -1,4 +1,4 @@
-Building an Image Search App using [unsplash.com](https://unsplash.com/) API.
+Building an Image Search App using [unsplash.com](https://unsplash.com/) API and https://fonts.google.com/ fonts.
 
 Homepage.
 ![2025-03-17 (15)](https://github.com/user-attachments/assets/cbdcc462-a2b4-4752-b427-bc2eb837da58)
