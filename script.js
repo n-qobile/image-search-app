@@ -1,4 +1,4 @@
-import API_KEY from "./config.js";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 //Getting all the impotant elements from the html file
 const formEl = document.querySelector("form"); //store our complete form section
