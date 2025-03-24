@@ -11,8 +11,7 @@ let page = 1;
 
 async function searchImages() {
   inputData = inputEl.value;
-  const url = "/.netlify/functions/searchImages"; // This calls the serverless function
-
+  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${API_KEY}`;
   const response = await fetch(url, {
     method: "POST",
     headers: {
