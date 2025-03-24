@@ -1,3 +1,5 @@
+const API_KEY = process.env.UNSPLASH_API_KEY;
+
 // Getting all the important elements from the HTML file
 const formEl = document.querySelector("form");
 const inputEl = document.getElementById("search-input");
