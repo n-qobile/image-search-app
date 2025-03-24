@@ -1,5 +1,3 @@
-const API_KEY = process.env.UNSPLASH_API_KEY;
-
 // Getting all the important elements from the HTML file
 const formEl = document.querySelector("form");
 const inputEl = document.getElementById("search-input");
@@ -12,21 +10,15 @@ let page = 1;
 async function searchImages() {
   inputData = inputEl.value;
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${API_KEY}`;
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query: inputData, page }), // Pass query and page
-  });
 
-  const results = await response.json(); // Get image results
+  const response = await fetch(url); // Fixed GET request
+  const data = await response.json();
 
   if (page === 1) {
     searchResults.innerHTML = "";
   }
 
-  results.map((result) => {
+  data.results.forEach((result) => {
     const imageWrapper = document.createElement("div");
     imageWrapper.classList.add("search-result");
 
@@ -56,6 +48,6 @@ formEl.addEventListener("submit", (event) => {
   searchImages();
 });
 
-showMore.addEventListener("click", (event) => {
+showMore.addEventListener("click", () => {
   searchImages();
 });
