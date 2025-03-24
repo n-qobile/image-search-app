@@ -11,7 +11,7 @@ async function searchImages() {
   inputData = inputEl.value;
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${API_KEY}`;
 
-  const response = await fetch(url); // Fixed GET request
+  const response = await fetch(url);
   const data = await response.json();
 
   if (page === 1) {
