@@ -1,3 +1,5 @@
+<h1>Image Search App</h1>
+
 Building an Image Search App using [unsplash.com](https://unsplash.com/) API and https://fonts.google.com/ fonts.
 
 Homepage.
